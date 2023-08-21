@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout android:id="@+id/drawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CourseFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/sky_blue"
+                >
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:menu="@menu/top_menu"
+                    app:title="Course" >
+                    <ImageView
+                        android:id="@+id/click_Image"
+                        android:layout_width="50sp"
+                        android:layout_marginLeft="150dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_camera_alt_24"
+                        />
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
+        </RelativeLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_View"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:menu="@menu/bottom_menu"
+            android:fitsSystemWindows="true"
+            />
+    </androidx.drawerlayout.widget.DrawerLayout>
+
